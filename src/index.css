@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* font-family: "Playfair Display", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* font-family: "Inter", sans-serif; */
+
+@import 'tailwindcss';
+
+@theme {
+    --radius: 0.75rem;
+    /* COLORS */
+    --color-blackPrimary: #121212;
+    --color-blackSecondary: #1D1D1D;
+    --color-whitePrimary: #FCF7FF;
+    --color-whiteSecondary: #D1D1D1;
+    --color-accentBlue: #5E2BFF;
+    --color-accentRed: #E63838;
+    --color-divider: #474747;
+    /* FONTS */
+    --font-regular: "Inter", sans-serif;
+    --font-heading: "Playfair Display", serif;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--color-blackPrimary);
+        color: var(--color-whitePrimary);
+        font-family: var(--font-regular);
+    }
+}
