@@ -19,16 +19,16 @@ const Navbar = () => {
                 <div className='hidden md:flex items-center gap-1'>
                     <div className='glass rounded-full px-2 py-1 flex items-center gap-1'>
                         <Link to='/about'
-                            className='px-4 py-2 text-sm text-whiteSecondary hover:text-whitePrimary rounded-full hover:bg-blackSecondary'>
+                            className='px-4 py-2 text-sm text-whiteSecondary hover:text-whitePrimary rounded-full hover:bg-white/4'>
                             About</Link>
                         <Link to='/projects'
-                            className='px-4 py-2 text-sm text-whiteSecondary hover:text-whitePrimary rounded-full hover:bg-blackSecondary'>
+                            className='px-4 py-2 text-sm text-whiteSecondary hover:text-whitePrimary rounded-full hover:bg-white/4'>
                             Projects</Link>
                         <Link to='/experience'
-                            className='px-4 py-2 text-sm text-whiteSecondary hover:text-whitePrimary rounded-full hover:bg-blackSecondary'>
+                            className='px-4 py-2 text-sm text-whiteSecondary hover:text-whitePrimary rounded-full hover:bg-white/4'>
                             Experience</Link>
                         <Link to='/testimonials'
-                            className='px-4 py-2 text-sm text-whiteSecondary hover:text-whitePrimary rounded-full hover:bg-blackSecondary'>
+                            className='px-4 py-2 text-sm text-whiteSecondary hover:text-whitePrimary rounded-full hover:bg-white/4'>
                             Testimonials</Link>
                     </div>
                 </div>
@@ -36,10 +36,10 @@ const Navbar = () => {
                 {/* CONTACT BUTTON */}
                 <div className='hidden md:block'>
                     <button
-                        className='relative overflow-hidden rounded-full focus:outline-none focus-visible:ring-2 
-                            focus-visible:ring-accentBlue border border-accentBlue hover:bg-accentBlue/90 hover:shadow-lg shadow-accentBlue/25
-                                transition-all duration-[0.16s] ease-in-out px-4 py-2 text-sm'>
-                        Contact Me
+                        className='relative overflow-hidden rounded-full focus:outline-none focus-visible:ring-2 cursor-pointer
+                            focus-visible:ring-whitePrimary bg-whitePrimary text-blackPrimary hover:shadow-lg shadow-whiteSecondary/25
+                                transition-all duration-[0.16s] ease-in-out px-6 py-2 text-sm'>
+                        Get in Touch
                     </button>
                 </div>
 
@@ -70,7 +70,7 @@ const Navbar = () => {
 
                         <button
                             className='relative overflow-hidden rounded-full focus:outline-none focus-visible:ring-2 
-                            focus-visible:ring-accentBlue bg-accentBlue hover:bg-accentBlue/90
+                            focus-visible:ring-whitePrimary bg-whitePrimary hover:bg-whitePrimary/90 text-blackPrimary
                                 w-full px-4 py-2 text-sm mt-2'>
                             Contact Me
                         </button>

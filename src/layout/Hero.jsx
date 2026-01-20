@@ -1,26 +1,108 @@
 import React from 'react'
+import { LuDownload, LuGithub, LuInstagram, LuLinkedin, LuMoveRight } from 'react-icons/lu'
+import profileImg from '../assets/myphoto.webp';
 
 const Hero = () => {
     return (
         <section className='relative min-h-screen flex items-center overflow-hidden
             bg-blackPrimary'>
-            
+
             {/* PARTICLES */}
             <div className='absolute inset-0 overflow-hidden pointer-events-none'>
                 {[...Array(30)].map((_, i) => (
 
                     <div className='absolute w-0.5 h-0.5 rounded-full opacity-60'
 
-                    style={{
-                        backgroundColor: "#ffffff",
-                        left: `${Math.random() * 100}%`,
-                        top: `${Math.random() * 100}%`,
-                        animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
-                        animationDelay: `${Math.random() * 5}s`,
-                    }}/>
+                        style={{
+                            backgroundColor: "#ffffff",
+                            left: `${Math.random() * 100}%`,
+                            top: `${Math.random() * 100}%`,
+                            animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
+                            animationDelay: `${Math.random() * 5}s`,
+                        }} />
                 ))}
             </div>
-        </section>
+
+            {/* CONTENT */}
+            <div className='comtainer mx-auto px-6 pt-32 pb-20 relative z-10'>
+                <div className='grid lg:grid-cols-2 gap-12 items-center'>
+
+                    {/* LEFT COLUMN - TEXT CONTENT */}
+                    <div className='space-y-8'>
+                        <div className='animate-fade-in'>
+                            <span className='glass inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs'>
+                                <span className='bg-green-500 w-2 h-2 rounded-full animate-pulse' />Nikhil Suresh — Analyst @ Accenture
+                            </span>
+                        </div>
+
+                        {/* HEADLINE */}
+                        <div className='space-y-4'>
+                            <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animate-delay-200'>
+                                Crafting <span className='text-accentBlue glow-text'>digital</span>
+                                <br />
+                                experiences with
+                                <br />
+                                <span className='font-heading italic font-normal text-normal'>precision.</span>
+                            </h1>
+                            <p className='text-lg text-whiteSecondary max-w-lg animate-fade-in animate-delay-300'>
+                                Building clean , responsive interfaces that load fast, look sharp and don't fight the user.
+                            </p>
+                        </div>
+
+                        {/* CTAs */}
+                        <div className='flex items-center gap-8'>
+                            <button className='relative flex items-center justify-center gap-2 overflow-hidden rounded-full focus:outline-none focus-visible:ring-2 cursor-pointer
+                                focus-visible:ring-whitePrimary bg-whitePrimary text-blackPrimary hover:shadow-lg shadow-whiteSecondary/25
+                                transition-all duration-[0.16s] ease-in-out px-6 py-3 text-sm min-w-45'>
+                                Contact<LuMoveRight /></button>
+
+                            <button className='relative bg-transparent border border-divider text-whitePrimary hover:border-whitePrimary/25
+                                transition-all duration-[0.16s] focus:outline-none focus-visible:ring-2 focus-visible:ring-whitePrimary
+                                focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group px-6 py-3 text-sm 
+                                rounded-full overflow-visible flex items-center justify-center gap-2 cursor-pointer min-w-45 
+                                animated-border'>
+                                <LuDownload />Download CV</button>
+                        </div>
+
+                        {/* SOCIALS */}
+                        <div className='text-lg text-whiteSecondary flex items-center gap-4 w-fit'>
+                            <div className='p-4 rounded-full glass hover:bg-accentBlue/2 hover:text-accentBlue 
+                                transition-all duration-[0.16s]'>
+                                <LuGithub />
+                            </div>
+                            <div className='p-4 rounded-full glass hover:bg-accentBlue/2 hover:text-accentBlue 
+                                transition-all duration-[0.16s]'>
+                                <LuLinkedin />
+                            </div>
+                            <div className='p-4 rounded-full glass hover:bg-accentBlue/2 hover:text-accentBlue 
+                                transition-all duration-[0.16s]'>
+                                <LuInstagram />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* RIGHT COLUMN - PROFILE IMAGE */}
+                    <div className='relative animate-fade-in animation-delay-300'>
+                        {/* PROFILE IMAGE */}
+                        <div className='relative max-w-md mx-auto'>
+                            <div className='absolute inset-0 rounded-3xl
+                            bg-linear-to-br from-accentBlue/30 via-transparent to-accentBlue/10
+                            blur-2xl animate-pulse' />
+                            <div className='relative glass rounded-3xl p-2 glow-border'>
+                                
+                                <img src={profileImg} alt="Nikhil Suresh"
+                                    className='w-full aspect-4/5 object-cover rounded-2xl'
+                                />
+
+                                {/* FLOATING BADGE */}
+                                {/* STATS BADGE */}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section >
     )
 }
 

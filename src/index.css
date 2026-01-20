@@ -12,8 +12,8 @@
     --color-blackSecondary: #1D1D1D;
     --color-whitePrimary: #FCF7FF;
     --color-whiteSecondary: #c4c4c4;
-    --color-accentBlue: #3509c4;
-    --color-accentRed: #E63838;
+    --color-accentBlue: #008dd5;
+    --color-accentRed: #de3c4b;
     --color-divider: #3d3d3d;
     /* FONTS */
     --font-regular: "Inter", sans-serif;
@@ -43,6 +43,15 @@
         background-color: color-mix(in srgb, var(--color-blackSecondary) 80%, transparent);
         backdrop-filter: blur(24px);
         border: 1px solid color-mix(in srgb, var(--color-divider) 60%, transparent);
+    }
+
+    .glow-text {
+        text-shadow: 0 0 30px color-mix(in srgb, var(--color-accentBlue) 50%, transparent);
+    }
+
+    .glow-border {
+        box-shadow: 0 0 20px color-mix(in srgb, var(--color-accentBlue) 25%, transparent),
+        inset 0 0 20px color-mix(in srgb, var(--color-accentBlue) 2%, transparent);
     }
 }
 
@@ -77,5 +86,35 @@
 
     .animate-fade-in {
         animation: fade-in 0.12s ease-in both;
+    }
+
+    .animate-delay-100 {
+        animation-delay: 100ms;
+    }
+
+    .animate-delay-200 {
+        animation-delay: 200ms;
+    }
+
+    .animate-delay-300 {
+        animation-delay: 300ms;
+    }
+
+    .animate-delay-400 {
+        animation-delay: 400ms;
+    }
+
+    .animate-delay-500 {
+        animation-delay: 500ms;
+    }
+
+    .animate-delay-600 {
+        animation-delay: 600ms;
+    }
+
+    .animated-border:hover {
+        background-color: color-mix(in srgb, var(--color-accentBlue) 25%, transparent);
+        box-shadow: 0 0 16px color-mix(in srgb, var(--color-accentBlue) 60%, transparent);
+        backdrop-filter: blur(16px);
     }
 }
