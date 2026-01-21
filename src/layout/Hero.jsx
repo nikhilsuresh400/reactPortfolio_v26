@@ -145,9 +145,8 @@ const Hero = () => {
             </div>
 
             <div className='absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800'>
-                <a href="#about" className='flex flex-col items-center gap-2 text-whiteSecondary hover:text-whitePrimary'>
-                    <span className='text-xs uppercase tracking-wider'>Scroll</span>
-                    <LuChevronDown className='w-4 h-4 animate-bounce'/>
+                <a href="#" className='text-whiteSecondary hover:text-whitePrimary'>
+                    <LuChevronDown className='w-5 h-5 animate-bounce'/>
                 </a>
             </div>
         </section>
