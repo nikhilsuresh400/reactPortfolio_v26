@@ -1,17 +1,30 @@
 import React from 'react'
-import { LuDownload, LuGithub, LuInstagram, LuLinkedin, LuMoveRight } from 'react-icons/lu'
+import { LuChevronDown, LuDownload, LuGithub, LuInstagram, LuLinkedin, LuMoveRight } from 'react-icons/lu'
 import profileImg from '../assets/myphoto.webp';
+
+const skills = [
+    "React",
+    "Javascript",
+    "Node.js",
+    "MongoDB",
+    "Express",
+    "jQuery",
+    "Tailwind CSS",
+    "Git",
+    "Github Actions",
+    "Vercel",
+    "Figma",
+];
 
 const Hero = () => {
     return (
-        <section className='relative min-h-screen flex items-center overflow-hidden
-            bg-blackPrimary'>
+        <section className='relative min-h-screen flex items-center overflow-hidden bg-blackPrimary'>
 
             {/* PARTICLES */}
             <div className='absolute inset-0 overflow-hidden pointer-events-none'>
                 {[...Array(30)].map((_, i) => (
 
-                    <div className='absolute w-0.5 h-0.5 rounded-full opacity-60'
+                    <div key={i} className='absolute w-0.5 h-0.5 rounded-full opacity-60'
 
                         style={{
                             backgroundColor: "#ffffff",
@@ -24,7 +37,7 @@ const Hero = () => {
             </div>
 
             {/* CONTENT */}
-            <div className='comtainer mx-auto px-6 pt-32 pb-20 relative z-10'>
+            <div className='container mx-auto px-6 pt-32 pb-20 relative z-10'>
                 <div className='grid lg:grid-cols-2 gap-12 items-center'>
 
                     {/* LEFT COLUMN - TEXT CONTENT */}
@@ -50,7 +63,7 @@ const Hero = () => {
                         </div>
 
                         {/* CTAs */}
-                        <div className='flex items-center gap-8'>
+                        <div className='flex items-center gap-4'>
                             <button className='relative flex items-center justify-center gap-2 overflow-hidden rounded-full focus:outline-none focus-visible:ring-2 cursor-pointer
                                 focus-visible:ring-whitePrimary bg-whitePrimary text-blackPrimary hover:shadow-lg shadow-whiteSecondary/25
                                 transition-all duration-[0.16s] ease-in-out px-6 py-3 text-sm min-w-45'>
@@ -67,22 +80,22 @@ const Hero = () => {
                         {/* SOCIALS */}
                         <div className='text-lg text-whiteSecondary flex items-center gap-4 w-fit'>
                             <div className='p-4 rounded-full glass hover:bg-accentBlue/2 hover:text-accentBlue 
-                                transition-all duration-[0.16s]'>
+                                transition-all duration-[0.16s] cursor-pointer'>
                                 <LuGithub />
                             </div>
                             <div className='p-4 rounded-full glass hover:bg-accentBlue/2 hover:text-accentBlue 
-                                transition-all duration-[0.16s]'>
+                                transition-all duration-[0.16s] cursor-pointer'>
                                 <LuLinkedin />
                             </div>
                             <div className='p-4 rounded-full glass hover:bg-accentBlue/2 hover:text-accentBlue 
-                                transition-all duration-[0.16s]'>
+                                transition-all duration-[0.16s] cursor-pointer'>
                                 <LuInstagram />
                             </div>
                         </div>
                     </div>
 
                     {/* RIGHT COLUMN - PROFILE IMAGE */}
-                    <div className='relative animate-fade-in animation-delay-300'>
+                    <div className='relative animate-fade-in animate-delay-400'>
                         {/* PROFILE IMAGE */}
                         <div className='relative max-w-md mx-auto'>
                             <div className='absolute inset-0 rounded-3xl
@@ -95,14 +108,49 @@ const Hero = () => {
                                 />
 
                                 {/* FLOATING BADGE */}
+                                <div className='absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float'>
+                                    <div className='flex items-center gap-3'>
+                                        <div className='w-2 h-2 bg-green-500 rounded-full animate-pulse' />
+                                        <span className='text-sm font-medium'>Available for work</span>
+                                    </div>
+                                </div>
                                 {/* STATS BADGE */}
+                                <div className='absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500'>
+                                    <div className='text-2xl font-bold text-accentBlue'>3+</div>
+                                    <div className='text-xs text-whiteSecondary'>Years Exp.</div>
+                                </div>
                             </div>
 
                         </div>
                     </div>
                 </div>
+
+                {/* SKILLS SECTION */}
+                <div className='mt-20 animate-fade-in animation-delay-600'>
+                    <p className='text-sm text-whiteSecondary mb- text-center'>Technologies I work with</p>
+                    <div className='relative overflow-hidden'>
+                        <div className='absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-blackPrimary to-transparent z-10' />
+                        <div className='absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-blackPrimary to-transparent z-10' />
+                        <div className='flex animate-marquee'>
+                            {[...skills, ...skills].map((skill, idx)=>(
+                                <div key={idx} className='shrink-0 px-8 py-4'>
+                                    <span className=' text-whiteSecondary/50 hover:text-whiteSecondary transition-colors'>
+                                        {skill}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section >
+
+            <div className='absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800'>
+                <a href="#about" className='flex flex-col items-center gap-2 text-whiteSecondary hover:text-whitePrimary'>
+                    <span className='text-xs uppercase tracking-wider'>Scroll</span>
+                    <LuChevronDown className='w-4 h-4 animate-bounce'/>
+                </a>
+            </div>
+        </section>
     )
 }
 

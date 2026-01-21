@@ -82,6 +82,25 @@
         75% {
             transform: translate(30px, 10px);
         }
+        
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
     }
 
     .animate-fade-in {
@@ -112,9 +131,29 @@
         animation-delay: 600ms;
     }
 
+    .animate-delay-700 {
+        animation-delay: 700ms;
+    }
+
+    .animate-delay-800 {
+        animation-delay: 800ms;
+    }
+
+    .animate-delay-900 {
+        animation-delay: 900ms;
+    }
+
     .animated-border:hover {
         background-color: color-mix(in srgb, var(--color-accentBlue) 25%, transparent);
         box-shadow: 0 0 16px color-mix(in srgb, var(--color-accentBlue) 60%, transparent);
         backdrop-filter: blur(16px);
+    }
+
+    .animate-float {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    .animate-marquee {
+        animation: marquee 30s linear infinite;
     }
 }

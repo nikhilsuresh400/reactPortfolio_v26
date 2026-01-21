@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { GiWarBonnet } from 'react-icons/gi'
 import { HiOutlineMenuAlt3 } from 'react-icons/hi'
 import { LuX } from 'react-icons/lu'
@@ -7,9 +7,25 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            setIsScrolled(true)
+        } 
+        else {
+            setIsScrolled(false)
+        }
+    }
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
-        <header className='fixed top-0 left-0 right-0 bg-transparent py-5 z-50'>
+        <header className={`fixed top-0 left-0 right-0 transition-all duration-[0.16s] ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} z-50`}>
             <nav className='container mx-auto px-6 flex items-center justify-between'>
                 {/* LOGO */}
                 <Link to='/' className='text-4xl text-whiteSecondary hover:text-whitePrimary 
