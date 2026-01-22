@@ -45,6 +45,44 @@ const About = () => {
                             Building the future,
                             <span className='text-whitePrimary font-heading italic font-normal'> one component at a time.</span>
                         </h2>
+                        <div className='space-y-4 text-whiteSecondary animate-fade-in animate-delay-200'>
+                            <p>
+                                Hello! I'm a Frontend developer with over 3 years of experience c
+                                rafting digital products that make a difference.
+                            </p>
+                            <p>
+                                I specialize in React, Javascript and Tailwind CSS. I build things on the web that usually work as intended.
+                                My approach combines technical excellence whit a keen eye fir design and user experience.
+                            </p>
+                            <p>
+                                When I'm not developing, you'll find me learning, breaking things on purpose,
+                                and slowly turning confusion into features.
+                            </p>
+                        </div>
+                        <div className='glass glow-border rounded-2xl p-6 animate-fade-in animate-delay-200 bg-blackSecondary'>
+                            <p className='text-md font-medium italic'>
+                                "My mission is to create digital experiences that are not just functional, but truly delightful -
+                                products that users love to use and developers love to mantain."
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* RIGHT COLUMN - HIGHLIGHTS */}
+                    <div className='grid sm:grid-cols-2 gap-6'>
+                        {highlights.map((item, index) => (
+                            <div
+                                key={index}
+                                className='glass p-6 rounded-2xl animate-fade-in'
+                                style={{ animationDelay: `${(index + 1) * 100}ms` }}>
+                                <div
+                                    className='w-12 h-12 rounded-xl bg-accentBlue/8 flex items-center justify-center mb-4
+                                        hover:bg-accentBlue/20'>
+                                    <item.icon className='w-5 h-5 text-accentBlue' />
+                                </div>
+                                <h3 className='font-semibold mb-2'>{item.title}</h3>
+                                <p className='text-sm text-whiteSecondary'>{item.description}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

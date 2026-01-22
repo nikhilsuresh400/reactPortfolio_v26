@@ -17,14 +17,14 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
-    const handleScroll = () => {
-        if (window.scrollY > 50) {
-            setIsScrolled(true)
-        } 
-        else {
-            setIsScrolled(false)
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true)
+            }
+            else {
+                setIsScrolled(false)
+            }
         }
-    }
 
         window.addEventListener("scroll", handleScroll);
 
@@ -32,7 +32,8 @@ const Navbar = () => {
     }, []);
 
     return (
-        <header className={`fixed top-0 left-0 right-0 transition-all duration-[0.16s] ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} z-50`}>
+        <header className={`fixed top-0 left-0 right-0 transition-all duration-[0.16s] outline-none focus:outline-none
+            ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} z-50`}>
             <nav className='container mx-auto px-6 flex items-center justify-between'>
                 {/* LOGO */}
                 <Link to='/' className='text-4xl text-whiteSecondary hover:text-whitePrimary 
@@ -41,10 +42,9 @@ const Navbar = () => {
                 {/* NAVLINKS (Desktop) */}
                 <div className='hidden md:flex items-center gap-1'>
                     <div className='glass rounded-full px-2 py-1 flex items-center gap-1'>
-                        {/* px-4 py-2 text-sm text-whiteSecondary hover:text-whitePrimary rounded-full hover:bg-white/4 */}
                         {navLinks.map((link, index) => (
                             <a href={link.href}
-                            key={index}
+                                key={index}
                                 className='px-4 py-2 text-sm text-whiteSecondary hover:text-whitePrimary rounded-full hover:bg-white/4'
                             >
                                 {link.label}
@@ -64,7 +64,7 @@ const Navbar = () => {
                 </div>
 
                 {/* MOBILE MENU BUTTON */}
-                <button className='md:hidden p-2 text-whiteSecondary cursor-pointer' 
+                <button className='md:hidden p-2 text-whiteSecondary cursor-pointer'
                     onClick={() => setIsMobileMenuOpen((prev) => !prev)}
                 >
                     {isMobileMenuOpen ? <LuX className='text-2xl' /> : <HiOutlineMenuAlt3 className='text-2xl' />}
@@ -75,19 +75,18 @@ const Navbar = () => {
             {isMobileMenuOpen && (
                 <div className='md:hidden glass-strong mx-6 mt-4 animate-fade-in'>
                     <div className='container mx-auto px-6 py-6 flex flex-col items-center gap-4'>
-                        {/* text-sm text-whiteSecondary hover:text-whitePrimary py-2 */}
                         {navLinks.map((link, index) => (
-                            <a 
+                            <a
                                 href={link.href}
                                 key={index}
-                                onClick={ () => setIsMobileMenuOpen(false) }
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className='text-sm text-whiteSecondary hover:text-whitePrimary py-2'
                             >
                                 {link.label}
                             </a>
                         ))}
 
-                        <button onClick={ () => setIsMobileMenuOpen(false) }
+                        <button onClick={() => setIsMobileMenuOpen(false)}
                             className='relative overflow-hidden rounded-full focus:outline-none focus-visible:ring-2 
                             focus-visible:ring-whitePrimary bg-whitePrimary hover:bg-whitePrimary/90 text-blackPrimary
                                 w-full px-4 py-2 text-sm mt-2'>
