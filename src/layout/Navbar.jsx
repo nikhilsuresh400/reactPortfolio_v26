@@ -32,8 +32,10 @@ const Navbar = () => {
     }, []);
 
     return (
-        <header className={`fixed top-0 left-0 right-0 transition-all duration-[0.16s] outline-none focus:outline-none
-            ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} z-50`}>
+        <header
+            className={`fixed top-0 left-0 right-0 ring-transparent ring-offset-0 transition-all duration-[0.16s] outline-none focus:outline-none
+            ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} z-50`}
+                style={{ outline: 'none' }}>
             <nav className='container mx-auto px-6 flex items-center justify-between'>
                 {/* LOGO */}
                 <Link to='/' className='text-4xl text-whiteSecondary hover:text-whitePrimary 

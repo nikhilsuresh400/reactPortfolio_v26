@@ -32,6 +32,16 @@
     }
 }
 
+header {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+header:focus,
+header:focus-visible {
+    outline: none;
+}
+
 @layer components {
     .glass {
         background-color: color-mix(in srgb, var(--color-blackSecondary) 50%, transparent);
@@ -43,6 +53,14 @@
         background-color: color-mix(in srgb, var(--color-blackSecondary) 80%, transparent);
         backdrop-filter: blur(24px);
         border: 1px solid color-mix(in srgb, var(--color-divider) 60%, transparent);
+        /* border: none; */
+        outline: none !important;
+    }
+
+    .glass-strong:focus, 
+    .glass-strong:active,
+    .glass-strong:focus-visible {
+        outline: none !important;
     }
 
     .glow-text {

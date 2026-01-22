@@ -25,7 +25,7 @@ const highlights = [
         title: "Innovation",
         description:
             "Staying ahead with latest technologies and best practices.",
-    },
+    }, 
 ]
 
 const About = () => {
