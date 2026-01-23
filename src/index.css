@@ -30,6 +30,10 @@
         color: var(--color-whitePrimary);
         font-family: var(--font-regular);
     }
+
+    button {
+        cursor: pointer;
+    }
 }
 
 header {
