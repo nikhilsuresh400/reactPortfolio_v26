@@ -174,4 +174,9 @@ header:focus-visible {
     .animate-marquee {
         animation: marquee 32s linear infinite;
     }
+
+    .timeline-glow {
+        box-shadow: 0 0 40px color-mix(in srgb, var(--color-accentBlue) 35%, transparent), 
+        0 0 80px color-mix(in srgb, var(--color-accentBlue) 25%, transparent);
+    }
 }

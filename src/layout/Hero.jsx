@@ -64,8 +64,9 @@ const Hero = () => {
 
                         {/* CTAs */}
                         <div className='flex items-center gap-4'>
-                            <button className='relative flex items-center justify-center gap-2 overflow-hidden rounded-full focus:outline-none focus-visible:ring-2 cursor-pointer
-                                focus-visible:ring-whitePrimary bg-whitePrimary text-blackPrimary hover:shadow-lg shadow-whiteSecondary/25
+                            <button className='relative flex items-center justify-center gap-2 overflow-hidden rounded-full 
+                                focus:outline-none focus-visible:ring-2 cursor-pointerfocus-visible:ring-whitePrimary 
+                                bg-whitePrimary text-blackPrimary hover:shadow-lg shadow-whiteSecondary/25 
                                 transition-all duration-[0.16s] ease-in-out px-6 py-3 text-sm min-w-45'>
                                 Contact<LuMoveRight /></button>
 
@@ -74,7 +75,8 @@ const Hero = () => {
                                 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group px-6 py-3 text-sm 
                                 rounded-full overflow-visible flex items-center justify-center gap-2 cursor-pointer min-w-45 
                                 animated-border'>
-                                <LuDownload />Download CV</button>
+                                <LuDownload />Download CV
+                            </button>
                         </div>
 
                         {/* SOCIALS */}
