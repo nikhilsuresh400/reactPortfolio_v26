@@ -1,11 +1,15 @@
 import React from 'react'
 import { LuArrowUpRight, LuGithub, LuMoveRight } from 'react-icons/lu'
+import project1 from '../assets/ecommerce-project.webp'
+import project2 from '../assets/projectmanagment-project.webp'
+import project3 from '../assets/cryptotracker-project.webp'
+import project4 from '../assets/writingassistant-project.webp'
 
 const projects = [
     {
         title: "E-Commerce Platform",
         description: "A full-featured e-commerce solution with inventory managment, payment gateway and product filtering features.",
-        image: "../assets/ecommerce-project.webp",
+        image: project1,
         tags: ["Reactjs", "Tailwindcss", "PostgreSQL"],
         link: "#",
         github: "#",
@@ -13,7 +17,7 @@ const projects = [
     {
         title: "Project Managment Tool",
         description: "A collaborative workspace for teams with real-time updates, task tracking and integrations",
-        image: "../assets/projectmanagment-project.webp",
+        image: project2,
         tags: ["Reactjs", "Tailwindcss", "PostgreSQL", "MongoDB"],
         link: "#",
         github: "#",
@@ -21,7 +25,7 @@ const projects = [
     {
         title: "Crypto Tracker",
         description: "A real-time crypto price tracker with live market data, trends, and a clean, responsive interface.",
-        image: "../assets/cryptotracker-project.webp",
+        image: project3,
         tags: ["Reactjs", "Tailwindcss", "PostgreSQL"],
         link: "#",
         github: "#",
@@ -29,7 +33,7 @@ const projects = [
     {
         title: "AI Writing Assiatant",
         description: "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-        image: "../assets/writingassistant-project.webp",
+        image: project4,
         tags: ["Reactjs", "OpenAI", "FastAPI"],
         link: "#",
         github: "#",
