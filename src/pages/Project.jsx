@@ -5,7 +5,7 @@ const projects = [
     {
         title: "E-Commerce Platform",
         description: "A full-featured e-commerce solution with inventory managment, payment gateway and product filtering features.",
-        image: "../src/assets/ecommerce-project.webp",
+        image: "../assets/ecommerce-project.webp",
         tags: ["Reactjs", "Tailwindcss", "PostgreSQL"],
         link: "#",
         github: "#",
@@ -13,7 +13,7 @@ const projects = [
     {
         title: "Project Managment Tool",
         description: "A collaborative workspace for teams with real-time updates, task tracking and integrations",
-        image: "../src/assets/projectmanagment-project.webp",
+        image: "../assets/projectmanagment-project.webp",
         tags: ["Reactjs", "Tailwindcss", "PostgreSQL", "MongoDB"],
         link: "#",
         github: "#",
@@ -21,7 +21,7 @@ const projects = [
     {
         title: "Crypto Tracker",
         description: "A real-time crypto price tracker with live market data, trends, and a clean, responsive interface.",
-        image: "../src/assets/cryptotracker-project.webp",
+        image: "../assets/cryptotracker-project.webp",
         tags: ["Reactjs", "Tailwindcss", "PostgreSQL"],
         link: "#",
         github: "#",
@@ -29,7 +29,7 @@ const projects = [
     {
         title: "AI Writing Assiatant",
         description: "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-        image: "../src/assets/writingassistant-project.webp",
+        image: "../assets/writingassistant-project.webp",
         tags: ["Reactjs", "OpenAI", "FastAPI"],
         link: "#",
         github: "#",
