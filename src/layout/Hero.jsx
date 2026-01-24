@@ -18,12 +18,12 @@ const skills = [
 
 const Hero = () => {
     return (
-        <section className='relative min-h-screen flex items-center overflow-hidden bg-blackPrimary'>
-
+        <section
+            id='hero'
+            className='relative min-h-screen flex items-center overflow-hidden bg-blackPrimary'>
             {/* PARTICLES */}
             <div className='absolute inset-0 overflow-hidden pointer-events-none'>
                 {[...Array(30)].map((_, i) => (
-
                     <div key={i} className='absolute w-0.5 h-0.5 rounded-full opacity-60'
 
                         style={{
@@ -64,11 +64,11 @@ const Hero = () => {
 
                         {/* CTAs */}
                         <div className='flex items-center gap-4'>
-                            <button className='relative flex items-center justify-center gap-2 overflow-hidden rounded-full 
+                            <a href='#contact' className='relative flex items-center justify-center gap-2 overflow-hidden rounded-full 
                                 focus:outline-none focus-visible:ring-2 cursor-pointerfocus-visible:ring-whitePrimary 
                                 bg-whitePrimary text-blackPrimary hover:shadow-lg shadow-whiteSecondary/25 
                                 transition-all duration-[0.16s] ease-in-out px-6 py-3 text-sm min-w-45'>
-                                Contact<LuMoveRight /></button>
+                                Contact<LuMoveRight /></a>
 
                             <button className='relative bg-transparent border border-divider text-whitePrimary hover:border-whitePrimary/25
                                 transition-all duration-[0.16s] focus:outline-none focus-visible:ring-2 focus-visible:ring-whitePrimary
@@ -104,7 +104,7 @@ const Hero = () => {
                             bg-linear-to-br from-accentBlue/30 via-transparent to-accentBlue/10
                             blur-2xl animate-pulse' />
                             <div className='relative glass rounded-3xl p-2 glow-border'>
-                                
+
                                 <img src={profileImg} alt="Nikhil Suresh"
                                     className='w-full aspect-4/5 object-cover rounded-2xl'
                                 />
@@ -134,7 +134,7 @@ const Hero = () => {
                         <div className='absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-blackPrimary to-transparent z-10' />
                         <div className='absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-blackPrimary to-transparent z-10' />
                         <div className='flex animate-marquee'>
-                            {[...skills, ...skills].map((skill, idx)=>(
+                            {[...skills, ...skills].map((skill, idx) => (
                                 <div key={idx} className='shrink-0 px-8 py-4'>
                                     <span className=' text-whiteSecondary/50 hover:text-whiteSecondary transition-colors'>
                                         {skill}
@@ -148,7 +148,7 @@ const Hero = () => {
 
             <div className='absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800'>
                 <a href="#" className='text-whiteSecondary hover:text-whitePrimary'>
-                    <LuChevronDown className='w-5 h-5 animate-bounce'/>
+                    <LuChevronDown className='w-5 h-5 animate-bounce' />
                 </a>
             </div>
         </section>

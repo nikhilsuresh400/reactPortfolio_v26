@@ -6,6 +6,7 @@ import About from './pages/About'
 import Project from './pages/Project'
 import Experience from './pages/Experience'
 import Testimonial from './pages/Testimonial'
+import Footer from './layout/Footer'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/experience' element={<Experience />} />
         <Route path='/testimonials' element={<Testimonial />} />
       </Routes>
+      <Footer />
     </div>
   )
 }

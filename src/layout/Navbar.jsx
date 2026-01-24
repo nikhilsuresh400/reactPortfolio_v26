@@ -35,11 +35,11 @@ const Navbar = () => {
         <header
             className={`fixed top-0 left-0 right-0 ring-transparent ring-offset-0 transition-all duration-[0.16s] outline-none focus:outline-none
             ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} z-50`}
-                style={{ outline: 'none' }}>
+            style={{ outline: 'none' }}>
             <nav className='container mx-auto px-6 flex items-center justify-between'>
                 {/* LOGO */}
-                <Link to='/' className='text-4xl text-whiteSecondary hover:text-whitePrimary 
-                    transition-colors duration-[0.16s] ease-in-out'><GiWarBonnet /></Link>
+                <a href='#' className='text-4xl text-whiteSecondary hover:text-whitePrimary 
+                    transition-colors duration-[0.16s] ease-in-out'><GiWarBonnet /></a>
 
                 {/* NAVLINKS (Desktop) */}
                 <div className='hidden md:flex items-center gap-1'>
@@ -57,12 +57,12 @@ const Navbar = () => {
 
                 {/* CONTACT BUTTON */}
                 <div className='hidden md:block'>
-                    <button
+                    <a href="#contact"
                         className='relative overflow-hidden rounded-full focus:outline-none focus-visible:ring-2 cursor-pointer
                             focus-visible:ring-whitePrimary bg-whitePrimary text-blackPrimary hover:shadow-lg shadow-whiteSecondary/25
-                                transition-all duration-[0.16s] ease-in-out px-6 py-2 text-sm'>
+                                transition-all duration-[0.16s] ease-in-out px-6 py-3 text-sm'>
                         Get in Touch
-                    </button>
+                    </a>
                 </div>
 
                 {/* MOBILE MENU BUTTON */}
@@ -88,12 +88,12 @@ const Navbar = () => {
                             </a>
                         ))}
 
-                        <button onClick={() => setIsMobileMenuOpen(false)}
+                        <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}
                             className='relative overflow-hidden rounded-full focus:outline-none focus-visible:ring-2 
                             focus-visible:ring-whitePrimary bg-whitePrimary hover:bg-whitePrimary/90 text-blackPrimary
-                                w-full px-4 py-2 text-sm mt-2'>
+                                w-full px-4 py-3 text-sm text-center'>
                             Contact Me
-                        </button>
+                        </a>
                     </div>
                 </div>
             )}

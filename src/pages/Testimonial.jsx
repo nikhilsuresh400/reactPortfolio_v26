@@ -41,7 +41,7 @@ const Testimonial = () => {
     return (
         <section
             id='experience'
-            className='py-32 relative overflow-hidden'
+            className='py-32 relative overflow-hidden bg-[#0c0c0c] border border-divider'
         >
 
             {/* BACKGROUND GLOW */}
