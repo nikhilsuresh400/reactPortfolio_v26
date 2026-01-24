@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { GiWarBonnet } from 'react-icons/gi'
 import { HiOutlineMenuAlt3 } from 'react-icons/hi'
-import { LuX } from 'react-icons/lu'
+import { LuMoon, LuSun, LuX } from 'react-icons/lu'
 import { Link } from 'react-router-dom'
 
 const navLinks = [
@@ -11,7 +11,7 @@ const navLinks = [
     { href: "#testimonials", label: "Testimonials" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ toggleTheme, theme }) => {
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -55,22 +55,40 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                {/* CONTACT BUTTON */}
-                <div className='hidden md:block'>
-                    <a href="#contact"
-                        className='relative overflow-hidden rounded-full focus:outline-none focus-visible:ring-2 cursor-pointer
-                            focus-visible:ring-whitePrimary bg-whitePrimary text-blackPrimary hover:shadow-lg shadow-whiteSecondary/25
-                                transition-all duration-[0.16s] ease-in-out px-6 py-3 text-sm'>
-                        Get in Touch
-                    </a>
+                <div className='flex items-center gap-4 md:gap-12'>
+
+                    {/* THEME TOGGLE BUTTON */}
+                    <div  
+                        onClick={toggleTheme} 
+                        className='transition-all group p-3 rounded-full cursor-pointer'>
+                        
+                        {theme === "dark" 
+                        ? 
+                        <LuSun className='text-xl text-whiteSecondary group-hover:text-whitePrimary transition-all
+                        group-hover:rotate-45'/> 
+                        : 
+                        <LuMoon className='text-xl text-whiteSecondary group-hover:text-whitePrimary transition-all
+                        group-hover:rotate-45'/>}
+                    </div>
+
+                    {/* CONTACT BUTTON */}
+                    <div className='hidden md:block'>
+                        <a href="#contact"
+                            className='relative overflow-hidden rounded-full focus:outline-none focus-visible:ring-2 cursor-pointer
+                                focus-visible:ring-whitePrimary bg-whitePrimary text-blackPrimary hover:shadow-lg shadow-whiteSecondary/25
+                                    transition-all duration-[0.16s] ease-in-out px-6 py-3 text-sm'>
+                            Get in Touch
+                        </a>
+                    </div>
+
+                    {/* MOBILE MENU BUTTON */}
+                    <button className='md:hidden p-2 text-whiteSecondary cursor-pointer'
+                        onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+                    >
+                        {isMobileMenuOpen ? <LuX className='text-2xl' /> : <HiOutlineMenuAlt3 className='text-2xl' />}
+                    </button>
                 </div>
 
-                {/* MOBILE MENU BUTTON */}
-                <button className='md:hidden p-2 text-whiteSecondary cursor-pointer'
-                    onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-                >
-                    {isMobileMenuOpen ? <LuX className='text-2xl' /> : <HiOutlineMenuAlt3 className='text-2xl' />}
-                </button>
             </nav>
 
             {/* NAVLINKS (Mobile) */}

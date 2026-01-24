@@ -5,6 +5,8 @@
 
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --radius: 0.75rem;
     /* COLORS */
@@ -15,6 +17,16 @@
     --color-accentBlue: #008dd5;
     --color-accentRed: #de3c4b;
     --color-divider: #3d3d3d;
+
+    /* LIGHT MODE COLORS */
+    --color-blackPrimary-light: #f3f3f3;
+    --color-blackSecondary-light: #c4c4c4;
+    --color-whitePrimary-light: #1d1d1d;
+    --color-whiteSecondary-light: #252525;
+    --color-accentBlue-light: #008dd5;
+    --color-accentRed-light: #de3c4b;
+    --color-divider-light: #c7c7c7;
+
     /* FONTS */
     --font-regular: "Inter", sans-serif;
     --font-heading: "Playfair Display", serif;

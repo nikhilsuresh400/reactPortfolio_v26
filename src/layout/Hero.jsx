@@ -16,25 +16,23 @@ const skills = [
     "Figma",
 ];
 
-const Hero = () => {
+const Hero = ({theme}) => {
     return (
         <section
             id='hero'
-            className='relative min-h-screen flex items-center overflow-hidden bg-blackPrimary'>
+            className='relative min-h-screen flex items-center overflow-hidden bg-blackPrimary-light text-whitePrimary-light dark:bg-blackPrimary'>
             {/* PARTICLES */}
             <div className='absolute inset-0 overflow-hidden pointer-events-none'>
                 {[...Array(30)].map((_, i) => (
-                    <div key={i} className='absolute w-0.5 h-0.5 rounded-full opacity-60'
-
+                    <div key={i} className='absolute w-0.5 h-0.5 rounded-full opacity-60 bg-whitePrimary-light dark:bg-blackPrimary'
                         style={{
-                            backgroundColor: "#ffffff",
                             left: `${Math.random() * 100}%`,
                             top: `${Math.random() * 100}%`,
                             animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
                             animationDelay: `${Math.random() * 5}s`,
                         }} />
                 ))}
-            </div>
+            </div>  
 
             {/* CONTENT */}
             <div className='container mx-auto px-6 pt-32 pb-20 relative z-10'>
@@ -43,8 +41,10 @@ const Hero = () => {
                     {/* LEFT COLUMN - TEXT CONTENT */}
                     <div className='space-y-8'>
                         <div className='animate-fade-in'>
-                            <span className='glass inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs'>
-                                <span className='bg-green-500 w-2 h-2 rounded-full animate-pulse' />Nikhil Suresh — Analyst @ Accenture
+                            <span className='glass inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs
+                                dark:bg-blackSecondary dark:text-whitePrimary'>
+                                <span className='bg-green-500 w-2 h-2 rounded-full animate-pulse' />
+                                Nikhil Suresh — Analyst @ Accenture
                             </span>
                         </div>
 
