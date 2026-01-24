@@ -40,7 +40,7 @@ const Testimonial = () => {
 
     return (
         <section
-            id='experience'
+            id='testimonials'
             className='py-32 relative overflow-hidden bg-[#0c0c0c] border border-divider'
         >
 
