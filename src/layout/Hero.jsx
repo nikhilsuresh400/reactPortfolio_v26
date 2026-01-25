@@ -70,7 +70,7 @@ const Hero = () => {
                                 transition-all duration-[0.16s] ease-in-out px-6 py-3 text-sm min-w-45'>
                                 Contact<LuMoveRight /></a>
 
-                            <button className='relative bg-transparent border border-divider text-whitePrimary-light dark:text-whitePrimary hover:border-whitePrimary-light/60 dark:hover:border-whitePrimary/25
+                            <button className='relative bg-transparent border border-divider text-whitePrimary-light dark:text-whitePrimary hover:border-whitePrimary-light/16 dark:hover:border-whitePrimary/25
                                 transition-all duration-[0.16s] focus:outline-none focus-visible:ring-2 focus-visible:ring-whitePrimary
                                 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group px-6 py-3 text-sm 
                                 rounded-full overflow-visible flex items-center justify-center gap-2 cursor-pointer min-w-45 
@@ -136,7 +136,7 @@ const Hero = () => {
                         <div className='flex animate-marquee'>
                             {[...skills, ...skills].map((skill, idx) => (
                                 <div key={idx} className='shrink-0 px-8 py-4'>
-                                    <span className='text-whiteSecondary-light/70 hover:text-whiteSecondary-light dark:text-whiteSecondary/50 dark:hover:text-whiteSecondary transition-colors cursor-default'>
+                                    <span className='text-whiteSecondary-light hover:text-whitePrimary-light dark:text-whiteSecondary/50 dark:hover:text-whiteSecondary transition-colors cursor-default font-light'>
                                         {skill}
                                     </span>
                                 </div>
@@ -147,7 +147,7 @@ const Hero = () => {
             </div>
 
             <div className='absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800'>
-                <a href="#" className='text-whiteSecondary-light hover:text-whitePrimary-light dark:text-whiteSecondary dark:hover:text-whitePrimary'>
+                <a href="#" className='text-whiteSecondary-light hover:text-whitePrimary-light dark:text-whiteSecondary dark:hover:text-whitePrimary '>
                     <LuChevronDown className='w-5 h-5 animate-bounce' />
                 </a>
             </div>

@@ -20,7 +20,7 @@ const testimonials = [
     {
         quote:
             "Not only is Nikhil technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
-        author: "Rohit VV",
+        author: "Rohith VV",
         role: "Full Stack Dev - TCS",
         avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
     },
@@ -41,7 +41,7 @@ const Testimonial = () => {
     return (
         <section
             id='testimonials'
-            className='py-32 relative overflow-hidden bg-[#0c0c0c] border border-divider'
+            className='py-32 relative overflow-hidden bg-[#fcfcfc] dark:bg-[#0c0c0c] text-whitePrimary-light dark:text-whitePrimary border border-divider/50 dark:border-divider'
         >
 
             {/* BACKGROUND GLOW */}
@@ -55,7 +55,7 @@ const Testimonial = () => {
                         className='text-accentBlue text-sm font-medium tracking-wider uppercase animate-fade-in'>What people say
                     </span>
                     <h2 className='text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animate-delay-100 text-accentBlue'>
-                        Kind words from <span className='font-heading italic font-normal text-whitePrimary'>amazing people.</span>
+                        Kind words from <span className='font-heading italic font-normal text-whitePrimary-light dark:text-whitePrimary'>amazing people.</span>
                     </h2>
                 </div>
 
@@ -63,7 +63,7 @@ const Testimonial = () => {
                 <div className='max-w-4xl mx-auto'>
                     <div className='relative'>
                         {/* MAIN TESTIMONIAL */}
-                        <div className='glass p-8 rounded-3xl md:p-12 glow-borderanimate-fade-in animate-delay-200'>
+                        <div className='bg-blackSecondary-light border dark:border-divider border-divider/50 dark:bg-blackSecondary p-8 rounded-3xl md:p-12 glow-border animate-fade-in animate-delay-200'>
                             <div className='absolute -top-4 left-8 w-12 h-12 rounded-full bg-accentBlue
                                 flex items-center justify-center'>
                                 <LuQuote className='w-6 h-6 text-whitePrmary' />
@@ -78,7 +78,7 @@ const Testimonial = () => {
                                     className='w-14 h-14 rounded-full object-cover ring-2 ring-accentBlue/20' />
                                 <div className='space-y-1'>
                                     <div className='font-semibold'>{testimonials[activeIdx].author}</div>
-                                    <div className='text-sm text-whiteSecondary'>
+                                    <div className='text-sm text-whiteSecondary-light dark:text-whiteSecondary'>
                                         {testimonials[activeIdx].role}
                                     </div>
                                 </div>
@@ -87,7 +87,7 @@ const Testimonial = () => {
 
                         {/* TESTIMONIALS NAVIGATION */}
                         <div className='flex items-center justify-center gap-4 mt-8'>
-                            <button className='p-3 rounded-full glass hover:bg-accentBlue/10 hover:text-whitePrimary transition-all'>
+                            <button className='p-3 rounded-full bg-blackSecondary-light dark:bg-blackSecondary border border-divider/50 dark:border-divider hover:bg-accentBlue/10 hover:text-whitePrimary-light dark:hover:text-whitePrimary dark:hover-text-whitePrimary transition-all'>
                                 <LuChevronLeft onClick={previous} />
                             </button>
                             <div className='flex gap-2'>
@@ -96,7 +96,7 @@ const Testimonial = () => {
                                         className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === activeIdx ? "w-8 bg-accentBlue" : "bg-whiteSecondary/30 hover:bg-whiteSecondary/50"}`} />
                                 ))}
                             </div>
-                            <button className='p-3 rounded-full glass hover:bg-accentBlue/10 hover:text-whitePrimary transition-all'>
+                            <button className='p-3 rounded-full bg-blackSecondary-light dark:bg-blackSecondary border border-divider/50 dark:border-divider hover:bg-accentBlue/10 hover:text-whitePrimary-light dark:hover:text-whitePrimary dark:hover-text-whitePrimary transition-all'>
                                 <LuChevronRight onClick={next} />
                             </button>
                         </div>

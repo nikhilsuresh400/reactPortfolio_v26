@@ -60,7 +60,9 @@ const Navbar = ({ toggleTheme, theme }) => {
                     {/* THEME TOGGLE BUTTON */}
                     <div  
                         onClick={toggleTheme} 
-                        className='transition-all group p-3 rounded-full cursor-pointer text-whiteSecondary-light hover:text-whitePrimary-light dark:text-whiteSecondary dark:hover:text-whitePrimary '>
+                        className='transition-all group p-3 rounded-full cursor-pointer bg-blackSecondary-light dark:bg-blackSecondary
+                        border border-divider/50 dark:border-divider
+                        text-whiteSecondary-light hover:text-whitePrimary-light dark:text-whiteSecondary dark:hover:text-whitePrimary '>
                         
                         {theme === "dark" 
                         ? 

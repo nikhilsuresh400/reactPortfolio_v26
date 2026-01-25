@@ -30,7 +30,7 @@ const highlights = [
 
 const About = () => {
     return (
-        <section id='about' className='py-32 relative overflow-hidden bg-blackPrimary-light text-whitePrimary-light dark:bg-blackPrimary'>
+        <section id='about' className='py-32 relative overflow-hidden bg-blackPrimary-light dark:bg-blackPrimary text-whitePrimary-light dark:text-whitePrimary'>
             <div className='container mx-auto px-6 relative z-10'>
                 <div className='grid lg:grid-cols-2 gap-16 items-center'>
                     {/* LEFT COLUMN */}
@@ -72,7 +72,7 @@ const About = () => {
                         {highlights.map((item, index) => (
                             <div
                                 key={index}
-                                className='glass p-6 rounded-2xl animate-fade-in'
+                                className='glass p-6 rounded-2xl animate-fade-in bg-blackSecondary-light dark:bg-blackSecondary/40'
                                 style={{ animationDelay: `${(index + 1) * 100}ms` }}>
                                 <div
                                     className='w-12 h-12 rounded-xl bg-accentBlue/8 flex items-center justify-center mb-4

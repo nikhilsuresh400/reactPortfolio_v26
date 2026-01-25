@@ -81,7 +81,8 @@ const Contact = () => {
     };
 
     return (
-        <section id='contact' className='py-32 relative overflow-hidden'>
+        <section id='contact' 
+            className='py-32 relative overflow-hidden bg-blackPrimary-light text-whitePrimary-light dark:bg-blackPrimary dark:text-whitePrimary'>
             <div className="absolute top-0 left-0 w-full h-full">
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accentBlue/5 rounded-full blur-3xl" />
             </div>
@@ -99,7 +100,8 @@ const Contact = () => {
 
                 {/* CONTACT FORM */}
                 <div className=' grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto'>
-                    <div className='glass p-8 rounded-xl border border-accentBlue/30 animate-fade-in animate-delay-300'>
+                    <div className='bg-blackSecondary-light dark:bg-blackSecondary/56 p-8 rounded-xl 
+                        border border-accentBlue/30 animate-fade-in animate-delay-300'>
                         <form className='space-y-6' onSubmit={handleSubmit}>
                             <div>
                                 <label htmlFor='name'
@@ -159,7 +161,7 @@ const Contact = () => {
 
                     {/* CONTACT INFO */}
                     <div className='space-y-6 animate-fade-in animate-delay-400'>
-                        <div className='glass rounded-3xl p-8'>
+                        <div className='bg-blackSecondary-light dark:bg-blackSecondary/56 border-accentBlue/30 rounded-3xl p-8'>
                             <h3 className='text-xl font-semibold mb-6'>
                                 Conatct Information
                             </h3>
@@ -185,7 +187,7 @@ const Contact = () => {
                             </div>
                         </div>
                         {/* AVAILABILITY CARD */}
-                        <div className='glass rounded-3xl p-8 border border-accentBlue/30'>
+                        <div className='bg-blackSecondary-light dark:bg-blackSecondary/56 rounded-3xl p-8 border border-accentBlue/30'>
                             <div className='flex items-center gap-3 mb-4'>
                                 <span className='w-3 h-3 bg-green-500 rounded-full animate-pulse' />
                                 <span className='font-medium'>Currently Available</span>
