@@ -13,7 +13,7 @@ const contactInfo = [
     },
     {
         icon: LuPhone,
-        lable: "Phone",
+        label: "Phone",
         value: "+91 8319958744",
         href: "tel:+918319958744",
     },
@@ -92,8 +92,9 @@ const Contact = () => {
                 <div className='max-w-3xl mb-16'>
                     <span className='text-accentBlue text-sm font-medium tracking-wider uppercase animate-fade-in'>Get In Touch</span>
                     <h2 className='text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animate-delay-100 text-accentBlue'>
-                        Let's build <span className='font-heading italic font-normal text-whitePrimary'>something great.</span></h2>
-                    <p className='text-whiteSecondary animate-fade-in animate-delay-200'>
+                        Let's build <span className='font-heading italic font-normal text-whitePrimary-light dark:text-whitePrimary'>
+                            something great.</span></h2>
+                    <p className='text-whiteSecondary-light dark:text-whiteSecondary animate-fade-in animate-delay-200'>
                         Have a project in mind? I'd love to hear about it. Send me a message and let's discuss how we can work together.
                     </p>
                 </div>
@@ -108,7 +109,7 @@ const Contact = () => {
                                     className='block text-sm font-medium mb-2'>Name</label>
                                 <input id='name' type='text' required placeholder='John Doe' value={formData.name}
                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                    className='w-full px-4 py-3 bg-blackSecondary rounded-xl border border-divider focus:border-accentBlue  outline-none transition-all' />
+                                    className='w-full px-4 py-3 bg-blackPrimary-light dark:bg-blackSecondary rounded-xl border border-divider/50 dark:border-divider focus:border-accentBlue  outline-none transition-all' />
                             </div>
 
                             <div>
@@ -116,7 +117,7 @@ const Contact = () => {
                                     className='block text-sm font-medium mb-2'>Email</label>
                                 <input id='email' type='email' required placeholder='your@email.com' value={formData.email}
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                    className='w-full px-4 py-3 bg-blackSecondary rounded-xl border border-divider focus:border-accentBlue  outline-none transition-all' />
+                                    className='w-full px-4 py-3 bg-blackPrimary-light dark:bg-blackSecondary rounded-xl border border-divider/50 dark:border-divider focus:border-accentBlue  outline-none transition-all' />
                             </div>
 
                             <div>
@@ -124,14 +125,14 @@ const Contact = () => {
                                     className='block text-sm font-medium mb-2'>Message</label>
                                 <textarea id='message' rows={5} required placeholder='Your message...' value={formData.message}
                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                    className='w-full px-4 py-3 bg-blackSecondary rounded-xl border border-divider focus:border-accentBlue  outline-none transition-all resize-none' />
+                                    className='w-full px-4 py-3 bg-blackPrimary-light dark:bg-blackSecondary rounded-xl border border-divider/50 dark:border-divider focus:border-accentBlue  outline-none transition-all resize-none' />
                             </div>
 
                             {/* SEND BUTTON */}
                             <button type='submit' disabled={isLoading}
                                 className='relative overflow-hidden rounded-full focus:outline-none focus-visible:ring-2 cursor-pointer
-                                w-full focus-visible:ring-whitePrimary bg-whitePrimary text-blackPrimary text-sm
-                                hover:shadow-lg shadow-whiteSecondary/25 transition-all duration-[0.16s] ease-in-out px-6 py-3  
+                                w-full focus-visible:ring-whitePrimary bg-whitePrimary-light text-blackPrimary-light dark:bg-whitePrimary dark:text-blackPrimary text-sm
+                                hover:shadow-lg shadow-whiteSecondary/25-light dark:shadow-whiteSecondary/25 transition-all duration-[0.16s] ease-in-out px-6 py-3  
                                 flex items-center justify-center gap-2'
                             >
                                 {isLoading ? (
@@ -161,7 +162,7 @@ const Contact = () => {
 
                     {/* CONTACT INFO */}
                     <div className='space-y-6 animate-fade-in animate-delay-400'>
-                        <div className='bg-blackSecondary-light dark:bg-blackSecondary/56 border-accentBlue/30 rounded-3xl p-8'>
+                        <div className='bg-blackSecondary-light dark:bg-blackSecondary/56 border border-accentBlue/30 rounded-3xl p-8'>
                             <h3 className='text-xl font-semibold mb-6'>
                                 Conatct Information
                             </h3>
@@ -170,14 +171,14 @@ const Contact = () => {
                                     <a
                                         key={i}
                                         href={item.href}
-                                        className='group flex items-center gap-4 p-4 rounded-xl hover:bg-blackSecondary transition-colors'>
+                                        className='group flex items-center gap-4 p-4 rounded-xl hover:bg-black/4 dark:hover:bg-blackSecondary transition-colors'>
                                         <div>
                                             <item.icon
                                                 className='w-5 h-5 text-accentBlue' />
                                         </div>
                                         <div>
                                             <div
-                                                className='text-sm text-whiteSecondary '>
+                                                className='text-sm text-whiteSecondary-light dark:text-whiteSecondary '>
                                                 {item.label}
                                             </div>
                                             <div className='font-medium'>{item.value}</div>
@@ -192,8 +193,8 @@ const Contact = () => {
                                 <span className='w-3 h-3 bg-green-500 rounded-full animate-pulse' />
                                 <span className='font-medium'>Currently Available</span>
                             </div>
-                            <p className='text-whiteSecondary text-sm'>
-                                I'm currebtly open to new oppurtunities and exciting projects, Wether you need a full-time engineer or a freelance consultant, let's talk!</p>
+                            <p className='text-whiteSecondary-light dark:text-whiteSecondary text-sm'>
+                                I'm currebtly open to new oppurtunities and exciting projects, Whether you need a full-time engineer or a freelance consultant, let's talk!</p>
                         </div>
                     </div>
                 </div>

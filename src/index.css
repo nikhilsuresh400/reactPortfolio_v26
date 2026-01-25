@@ -46,6 +46,7 @@
 @layer base {
     html {
         scroll-behavior: smooth;
+        transition: background-color 300ms ease, color 300ms ease;
     }
 
     body {

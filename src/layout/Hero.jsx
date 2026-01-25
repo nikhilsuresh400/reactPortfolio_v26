@@ -24,7 +24,7 @@ const Hero = () => {
             {/* PARTICLES */}
             <div className='absolute inset-0 overflow-hidden pointer-events-none'>
                 {[...Array(30)].map((_, i) => (
-                    <div key={i} className='absolute w-0.5 h-0.5 rounded-full opacity-60 bg-whitePrimary-light dark:bg-blackPrimary'
+                    <div key={i} className='absolute w-1 h-1 rounded-full opacity-60 bg-whitePrimary-light dark:bg-whitePrimary'
                         style={{
                             left: `${Math.random() * 100}%`,
                             top: `${Math.random() * 100}%`,

@@ -32,16 +32,16 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className='py-12 border-t border-divider'>
+        <footer className='py-12 border-t border-divider bg-blackPrimary-light text-whitePrimary-light dark:bg-blackPrimary dark:text-whitePrimary'>
             <div className='container mx-auto px-6'>
                 <div className='flex flex-col md:flex-row items-center justify-between gap-8'>
 
                     {/* LOGO & COPYRIGHT */}
-                    <div className='text-center md:text-left'>
-                        <a href="#" className='text-4xl text-whiteSecondary hover:text-whitePrimary 
-                    transition-colors duration-[0.16s] ease-in-out'><GiWarBonnet /></a>
+                    <div className='flex flex-col place-items-center md:flex-row md:gap-4 md:text-left '>
+                        <a href="#" className='text-4xl text-whiteSecondary-light hover:text-whitePrimary-light dark:text-whiteSecondary dark:hover:text-whitePrimary 
+                    transition-colors duration-[0.16s] ease-in-out w-fit'><GiWarBonnet /></a>
                         <p
-                            className='text-sm text-whiteSecondary mt-2'>
+                            className='text-sm text-whiteSecondary-light dark:text-whiteSecondary mt-2'>
                             © {currentYear} Nikhil Suresh. All rights reserved.</p>
                     </div>
 
@@ -51,7 +51,8 @@ const Footer = () => {
                             <a
                                 key={link.href}
                                 href={link.href}
-                                className='text-sm text-whiteSecondary hover:text-whitePrimary transition-colors'
+                                className='text-sm text-whiteSecondary-light hover:text-whitePrimary-light 
+                                    dark:text-whiteSecondary dark:hover:text-whitePrimary transition-colors'
                             >
                                 {link.label}
                             </a>
@@ -65,7 +66,7 @@ const Footer = () => {
                                 key={social.label}
                                 href={social.href}
                                 aria-label={social.label}
-                                className='p-2 rounded-full glass hover:bg-accentBlue/10 hover:text-whitePrimary transform-all'
+                                className='p-2 rounded-full glass hover:bg-accentBlue/10 hover:text-whitePrimary-light dark:hover:text-whitePrimary transform-all'
                             >
                                 <social.icon className='w-5 h-5' />
                             </a>
