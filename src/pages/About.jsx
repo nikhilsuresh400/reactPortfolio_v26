@@ -30,7 +30,7 @@ const highlights = [
 
 const About = () => {
     return (
-        <section id='about' className='py-32 relative overflow-hidden'>
+        <section id='about' className='py-32 relative overflow-hidden bg-blackPrimary-light text-whitePrimary-light dark:bg-blackPrimary'>
             <div className='container mx-auto px-6 relative z-10'>
                 <div className='grid lg:grid-cols-2 gap-16 items-center'>
                     {/* LEFT COLUMN */}
@@ -43,12 +43,12 @@ const About = () => {
 
                         <h2 className='text-4xl md:text-5xl font-bold leading-tight animate-fade-in animate-delay-100 text-accentBlue'>
                             Building the future,
-                            <span className='text-whitePrimary font-heading italic font-normal'> one component at a time.</span>
+                            <span className='text-whitePrimary-light dark:text-whitePrimary font-heading italic font-normal'> one component at a time.</span>
                         </h2>
-                        <div className='space-y-4 text-whiteSecondary animate-fade-in animate-delay-200'>
+                        <div className='space-y-4 text-whiteSecondary-light dark:text-whiteSecondary animate-fade-in animate-delay-200'>
                             <p>
-                                Hello! I'm a Frontend developer with over 3 years of experience c
-                                rafting digital products that make a difference.
+                                Hello! I'm a Frontend developer with over 3 years of experience 
+                                crafting digital products that make a difference.
                             </p>
                             <p>
                                 I specialize in React, Javascript and Tailwind CSS. I build things on the web that usually work as intended.
@@ -59,8 +59,8 @@ const About = () => {
                                 and slowly turning confusion into features.
                             </p>
                         </div>
-                        <div className='glass glow-border rounded-2xl p-6 animate-fade-in animate-delay-200 bg-blackSecondary'>
-                            <p className='text-md font-medium italic'>
+                        <div className='glass glow-border rounded-2xl p-6 animate-fade-in animate-delay-200 bg-blackSecondary-light dark:bg-blackSecondary'>
+                            <p className='text-md font-medium italic text-whitePrimary-light dark:text-whitePrimary'>
                                 "My mission is to create digital experiences that are not just functional, but truly delightful -
                                 products that users love to use and developers love to mantain."
                             </p>
@@ -79,8 +79,8 @@ const About = () => {
                                         hover:bg-accentBlue/20'>
                                     <item.icon className='w-5 h-5 text-accentBlue' />
                                 </div>
-                                <h3 className='font-semibold mb-2'>{item.title}</h3>
-                                <p className='text-sm text-whiteSecondary'>{item.description}</p>
+                                <h3 className='font-semibold mb-2 dark:text-blackPrimary-light'>{item.title}</h3>
+                                <p className='text-sm text-whiteSecondary-light dark:text-whiteSecondary'>{item.description}</p>
                             </div>
                         ))}
                     </div>

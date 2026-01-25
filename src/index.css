@@ -7,6 +7,18 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+    /* GLASS COLORS */
+        --color-glass-bg: color-mix(in srgb, var(--color-blackSecondary-light) 50%, transparent);
+        --color-glass-strong-bg: color-mix(in srgb, var(--color-blackSecondary-light) 80%, transparent);
+    
+    .dark {
+        --color-glass-bg: color-mix(in srgb, var(--color-blackSecondary) 50%, transparent);
+        --color-glass-strong-bg: color-mix(in srgb, var(--color-blackSecondary) 80%, transparent);
+    }
+
+}
+
 @theme {
     --radius: 0.75rem;
     /* COLORS */
@@ -15,21 +27,20 @@
     --color-whitePrimary: #FCF7FF;
     --color-whiteSecondary: #c4c4c4;
     --color-accentBlue: #008dd5;
-    --color-accentRed: #de3c4b;
     --color-divider: #3d3d3d;
 
     /* LIGHT MODE COLORS */
-    --color-blackPrimary-light: #f3f3f3;
-    --color-blackSecondary-light: #c4c4c4;
+    --color-blackPrimary-light: #f5f5f5;
+    --color-blackSecondary-light: #fafafa;
     --color-whitePrimary-light: #1d1d1d;
-    --color-whiteSecondary-light: #252525;
+    --color-whiteSecondary-light: #313131;
     --color-accentBlue-light: #008dd5;
-    --color-accentRed-light: #de3c4b;
-    --color-divider-light: #c7c7c7;
+    --color-divider-light: #3d3d3d;
 
     /* FONTS */
     --font-regular: "Inter", sans-serif;
     --font-heading: "Playfair Display", serif;
+
 }
 
 @layer base {
@@ -60,13 +71,13 @@ header:focus-visible {
 
 @layer components {
     .glass {
-        background-color: color-mix(in srgb, var(--color-blackSecondary) 50%, transparent);
+        background-color: var(--color-glass-bg);
         backdrop-filter: blur(16px);
         border: 1px solid color-mix(in srgb, var(--color-divider) 50%, transparent);
     }
 
     .glass-strong {
-        background-color: color-mix(in srgb, var(--color-blackSecondary) 80%, transparent);
+        background-color: var(--color-glass-strong-bg);
         backdrop-filter: blur(24px);
         border: 1px solid color-mix(in srgb, var(--color-divider) 60%, transparent);
         /* border: none; */
