@@ -44,7 +44,7 @@ const Hero = () => {
                             <span className='glass inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs bg-blackSecondary-light
                                 dark:bg-blackSecondary dark:text-whitePrimary'>
                                 <span className='bg-green-500 w-2 h-2 rounded-full animate-pulse' />
-                                Nikhil Suresh — Analyst @ Accenture
+                                Nikhil Suresh — Analyst @ Fenopix
                             </span>
                         </div>
 
