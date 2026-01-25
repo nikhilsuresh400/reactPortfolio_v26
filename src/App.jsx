@@ -9,6 +9,7 @@ import Testimonial from './pages/Testimonial'
 import Footer from './layout/Footer'
 import Hero from './layout/Hero'
 import Contact from './pages/Contact'
+import { Analytics } from '@vercel/analytics/react'
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -25,6 +26,7 @@ const App = () => {
   return (
     <div className={theme}>
 
+      <Analytics/>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Hero />
       <About />
