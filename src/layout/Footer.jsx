@@ -5,7 +5,7 @@ import { LuGithub, LuInstagram, LuLinkedin } from 'react-icons/lu'
 const socialLinks = [
     {
         icon: LuGithub,
-        href: "#",
+        href: "https://github.com/nikhilsuresh400",
         label: "Github",
     },
     {
@@ -66,6 +66,7 @@ const Footer = () => {
                                 key={social.label}
                                 href={social.href}
                                 aria-label={social.label}
+                                target='_blank' noopener noreferrer 
                                 className='p-2 rounded-full glass hover:bg-accentBlue/10 hover:text-whitePrimary-light dark:hover:text-whitePrimary transform-all'
                             >
                                 <social.icon className='w-5 h-5' />

@@ -1,6 +1,7 @@
 import React from 'react'
 import { LuChevronDown, LuDownload, LuGithub, LuInstagram, LuLinkedin, LuMoveRight } from 'react-icons/lu'
 import profileImg from '../assets/myphoto.webp';
+import resume from '../assets/Resume-26.pdf'
 
 const skills = [
     "React",
@@ -44,7 +45,7 @@ const Hero = () => {
                             <span className='glass inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs bg-blackSecondary-light
                                 dark:bg-blackSecondary dark:text-whitePrimary'>
                                 <span className='bg-green-500 w-2 h-2 rounded-full animate-pulse' />
-                                Nikhil Suresh — Analyst @ Fenopix
+                                Nikhil Suresh
                             </span>
                         </div>
 
@@ -69,22 +70,25 @@ const Hero = () => {
                                 bg-whitePrimary-light text-blackPrimary-light dark:bg-whitePrimary dark:text-blackPrimary hover:shadow-lg shadow-whiteSecondary-light/25 dark:shadow-whiteSecondary/25 
                                 transition-all duration-[0.16s] ease-in-out px-6 py-3 text-sm min-w-45'>
                                 Contact<LuMoveRight /></a>
-
-                            <button className='relative bg-transparent border border-divider text-whitePrimary-light dark:text-whitePrimary hover:border-whitePrimary-light/16 dark:hover:border-whitePrimary/25
+                            <a href={resume} download='Nikhil-Suresh_Resume'>
+                                <button
+                                    className='relative bg-transparent border border-divider text-whitePrimary-light dark:text-whitePrimary hover:border-whitePrimary-light/16 dark:hover:border-whitePrimary/25
                                 transition-all duration-[0.16s] focus:outline-none focus-visible:ring-2 focus-visible:ring-whitePrimary
                                 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group px-6 py-3 text-sm 
                                 rounded-full overflow-visible flex items-center justify-center gap-2 cursor-pointer min-w-45 
                                 animated-border'>
-                                <LuDownload />Download CV
-                            </button>
+                                    <LuDownload />Download CV
+                                </button>
+                            </a>
                         </div>
 
                         {/* SOCIALS */}
                         <div className='text-lg text-whiteSecondary-light dark:text-whiteSecondary flex items-center gap-4 w-fit'>
-                            <div className='p-4 rounded-full bg-blackSecondary-light dark:bg-blackSecondary hover:bg-accentBlue/2 hover:text-accentBlue 
+                            <a href='https://github.com/nikhilsuresh400' target='_blank' noopener noreferrer 
+                                className='p-4 rounded-full bg-blackSecondary-light dark:bg-blackSecondary hover:bg-accentBlue/2 hover:text-accentBlue 
                                 transition-all duration-[0.16s] cursor-pointer border border-divider bg'>
                                 <LuGithub />
-                            </div>
+                            </a>
                             <div className='p-4 rounded-full bg-blackSecondary-light dark:bg-blackSecondary hover:bg-accentBlue/2 hover:text-accentBlue 
                                 transition-all duration-[0.16s] cursor-pointer border border-divider bg'>
                                 <LuLinkedin />
