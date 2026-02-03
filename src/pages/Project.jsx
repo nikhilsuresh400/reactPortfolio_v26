@@ -8,7 +8,7 @@ import project4 from '../assets/writingassistant-project.webp'
 const projects = [
     {
         title: "AI Resume Analyser",
-        description: "An intelligent resume analyser powered by gpt-4, helping users create better resumes.",
+        description: "An intelligent resume analyser powered by gpt-4, helping users improve create better resumes.",
         image: project1,
         tags: ["Reactjs", "Tailwindcss", "Puter.ai"],
         link: "https://resume-analyser-aipowered.vercel.app/",
