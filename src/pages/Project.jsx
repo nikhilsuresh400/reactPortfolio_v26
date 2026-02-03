@@ -1,18 +1,18 @@
 import React from 'react'
 import { LuArrowUpRight, LuDownload, LuGithub, LuMoveRight } from 'react-icons/lu'
-import project1 from '../assets/ecommerce-project.webp'
+import project1 from '../assets/resumeanalyser-project.png'
 import project2 from '../assets/projectmanagment-project.webp'
 import project3 from '../assets/cryptotracker-project.webp'
 import project4 from '../assets/writingassistant-project.webp'
 
 const projects = [
     {
-        title: "E-Commerce Platform",
-        description: "A full-featured e-commerce solution with inventory managment, payment gateway and product filtering features.",
+        title: "AI Resume Analyser",
+        description: "An intelligent resume analyser powered by gpt-4, helping users create better resumes.",
         image: project1,
-        tags: ["Reactjs", "Tailwindcss", "PostgreSQL"],
-        link: "#",
-        github: "#",
+        tags: ["Reactjs", "Tailwindcss", "Puter.ai"],
+        link: "https://resume-analyser-aipowered.vercel.app/",
+        github: "https://github.com/nikhilsuresh400/resume-analyser",
     },
     {
         title: "Project Managment Tool",
@@ -79,10 +79,10 @@ const Project = () => {
                                 {/* OVERLAY LINKS */}
                                 <div className='absolute inset-0 flex items-center justify-center gap-4 
                                 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                                    <a href={project.link} className='p-3 glass rounded-full hover:bg-accentBlue transition-all'>
+                                    <a href={project.link} target='_blank' noopener noreferrer className='p-3 glass rounded-full hover:bg-accentBlue transition-all'>
                                         <LuArrowUpRight className='w-5 h-5' />
                                     </a>
-                                    <a href={project.link} className='p-3 glass rounded-full hover:bg-accentBlue transition-all'>
+                                    <a href={project.link} target='_blank' noopener noreferrer className='p-3 glass rounded-full hover:bg-accentBlue transition-all'>
                                         <LuGithub className='w-5 h-5' />
                                     </a>
                                 </div>
