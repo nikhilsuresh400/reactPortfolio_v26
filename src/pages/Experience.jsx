@@ -1,23 +1,23 @@
 import React from 'react'
 
 const experiences = [
+    // {
+    //     period: "2022 - Present",
+    //     role: "Frontend Engineer",
+    //     company: "Fenopix Solutions",
+    //     description:
+    //         "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
+    //     technologies: ["React", "Javascript", "GraphQL"],
+    //     current: true,
+    // },
     {
-        period: "2022 - Present",
-        role: "Frontend Engineer",
-        company: "Fenopix Solutions",
-        description:
-            "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-        technologies: ["React", "Javascript", "GraphQL"],
-        current: true,
-    },
-    {
-        period: "2021 - 2022",
+        period: "2021 - Present",
         role: "Freelance Developer",
         company: "Self Employed",
         description:
             "Delivered custom web solutions for small businesses and startups. Built 5+ websites and applications, handling everything from design to deployment.",
-        technologies: ["React", "Javascript", "Wordpress", "MySQL"],
-        current: false,
+        technologies: ["React", "Javascript", "Wordpress", "Talwindcss", "Bootstrap"],
+        current: true,
     },
 ]
 
