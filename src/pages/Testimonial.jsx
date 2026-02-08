@@ -1,28 +1,23 @@
 import React, { useState } from 'react'
 import { LuChevronLeft, LuChevronRight, LuQuote } from 'react-icons/lu'
+import testimonialImage1 from '../assets/rohit-testimonial-image.webp'
+import testimonialImage2 from '../assets/pranav-testimonial-image.webp'
 
 const testimonials = [
-    {
-        quote:
-            "Nikhil's expertise in ReactJS helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
-        author: "Sarah Chen",
-        role: "CTO , Tech Innovators Inc.",
-        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
-
-    },
-    {
-        quote:
-            "Working with Nikhil was a game-changer for our project. He delivered ahead of schedule with awesome code quality.",
-        author: "David Kim",
-        role: "Project Mangaer, Startup Labs",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
-    },
     {
         quote:
             "Not only is Nikhil technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
         author: "Rohith VV",
         role: "Full Stack Dev - TCS",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+        avatar: testimonialImage1,
+    },
+    {
+        quote:
+            "Nikhil's expertise in ReactJS helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
+        author: "Pranav CN",
+        role: "Developer, Self-Employed",
+        avatar: testimonialImage2,
+
     },
 ]
 
@@ -87,8 +82,9 @@ const Testimonial = () => {
 
                         {/* TESTIMONIALS NAVIGATION */}
                         <div className='flex items-center justify-center gap-4 mt-8'>
-                            <button className='p-3 rounded-full bg-blackSecondary-light dark:bg-blackSecondary border border-divider/50 dark:border-divider hover:bg-accentBlue/10 hover:text-whitePrimary-light dark:hover:text-whitePrimary dark:hover-text-whitePrimary transition-all'>
-                                <LuChevronLeft onClick={previous} />
+                            <button onClick={previous}
+                                className='p-3 rounded-full bg-blackSecondary-light dark:bg-blackSecondary border border-divider/50 dark:border-divider hover:bg-accentBlue/10 hover:text-whitePrimary-light dark:hover:text-whitePrimary dark:hover-text-whitePrimary transition-all'>
+                                <LuChevronLeft />
                             </button>
                             <div className='flex gap-2'>
                                 {testimonials.map((_, idx) => (
@@ -96,8 +92,9 @@ const Testimonial = () => {
                                         className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === activeIdx ? "w-8 bg-accentBlue" : "bg-whiteSecondary/30 hover:bg-whiteSecondary/50"}`} />
                                 ))}
                             </div>
-                            <button className='p-3 rounded-full bg-blackSecondary-light dark:bg-blackSecondary border border-divider/50 dark:border-divider hover:bg-accentBlue/10 hover:text-whitePrimary-light dark:hover:text-whitePrimary dark:hover-text-whitePrimary transition-all'>
-                                <LuChevronRight onClick={next} />
+                            <button onClick={next} 
+                                className='p-3 rounded-full bg-blackSecondary-light dark:bg-blackSecondary border border-divider/50 dark:border-divider hover:bg-accentBlue/10 hover:text-whitePrimary-light dark:hover:text-whitePrimary dark:hover-text-whitePrimary transition-all'>
+                                <LuChevronRight />
                             </button>
                         </div>
                     </div>

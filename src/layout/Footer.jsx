@@ -10,14 +10,14 @@ const socialLinks = [
     },
     {
         icon: LuLinkedin,
-        href: "#",
+        href: "https://www.linkedin.com/in/nikhil-suresh-8694ba375/",
         label: "LinkedIn",
     },
-    {
-        icon: LuInstagram,
-        href: "#",
-        label: "Instagram",
-    },
+    // {
+    //     icon: LuInstagram,
+    //     href: "#",
+    //     label: "Instagram",
+    // },
 ];
 
 const footerLinks = [

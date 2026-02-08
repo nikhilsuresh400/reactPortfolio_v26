@@ -6,6 +6,7 @@ import resume from '../assets/Resume-26.pdf'
 const skills = [
     "React",
     "Javascript",
+    "Wordpress",
     "Node.js",
     "MongoDB",
     "Express",
@@ -89,14 +90,15 @@ const Hero = () => {
                                 transition-all duration-[0.16s] cursor-pointer border border-divider bg'>
                                 <LuGithub />
                             </a>
-                            <div className='p-4 rounded-full bg-blackSecondary-light dark:bg-blackSecondary hover:bg-accentBlue/2 hover:text-accentBlue 
+                            <a href='https://www.linkedin.com/in/nikhil-suresh-8694ba375/' target='_blank' noopener noreferrer 
+                                className='p-4 rounded-full bg-blackSecondary-light dark:bg-blackSecondary hover:bg-accentBlue/2 hover:text-accentBlue 
                                 transition-all duration-[0.16s] cursor-pointer border border-divider bg'>
                                 <LuLinkedin />
-                            </div>
-                            <div className='p-4 rounded-full bg-blackSecondary-light dark:bg-blackSecondary hover:bg-accentBlue/2 hover:text-accentBlue 
+                            </a>
+                            {/* <div className='p-4 rounded-full bg-blackSecondary-light dark:bg-blackSecondary hover:bg-accentBlue/2 hover:text-accentBlue 
                                 transition-all duration-[0.16s] cursor-pointer border border-divider bg'>
                                 <LuInstagram />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 

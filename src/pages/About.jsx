@@ -47,7 +47,7 @@ const About = () => {
                         </h2>
                         <div className='space-y-4 text-whiteSecondary-light dark:text-whiteSecondary animate-fade-in animate-delay-200'>
                             <p>
-                                Hello! I'm a Frontend developer with over 3 years of experience 
+                                Hello! I'm a Frontend Web developer with over 3 years hands-on experience 
                                 crafting digital products that make a difference.
                             </p>
                             <p>
