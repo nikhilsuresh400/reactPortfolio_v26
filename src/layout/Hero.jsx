@@ -4,7 +4,7 @@ import profileImg from '../assets/myphoto.webp';
 import resume from '../assets/Resume-26.pdf'
 
 const skills = [
-    "React",
+    "Reactjs",
     "Javascript",
     "Wordpress",
     "Node.js",

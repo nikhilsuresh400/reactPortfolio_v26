@@ -1,8 +1,8 @@
 import React from 'react'
 import { LuArrowUpRight, LuDownload, LuGithub, LuMoveRight } from 'react-icons/lu'
 import project1 from '../assets/resumeanalyser-project.png'
-import project2 from '../assets/projectmanagment-project.webp'
-import project3 from '../assets/cryptotracker-project.webp'
+import project2 from '../assets/portfolio2024-project.png'
+import project3 from '../assets/sundown-project.png'
 import project4 from '../assets/writingassistant-project.webp'
 
 const projects = [
@@ -15,28 +15,20 @@ const projects = [
         github: "https://github.com/nikhilsuresh400/resume-analyser",
     },
     {
-        title: "Project Managment Tool",
-        description: "A collaborative workspace for teams with real-time updates, task tracking and integrations",
+        title: "Portfolio 2024",
+        description: "Portfolio website showcasing my skills and technologies i use. Integrated Framer Motion for smooth animations and improved user experiences.",
         image: project2,
-        tags: ["Reactjs", "Tailwindcss", "PostgreSQL", "MongoDB"],
-        link: "#",
-        github: "#",
+        tags: ["Reactjs", "Tailwindcss", "FramerMotion", "React Router"],
+        link: "https://portfolio-personal-navy-mu.vercel.app/",
+        github: "https://github.com/nikhilsuresh400/ReactPortfolio",
     },
     {
-        title: "Crypto Tracker",
-        description: "A real-time crypto price tracker with live market data, trends, and a clean, responsive interface.",
+        title: "Sundown Studio",
+        description: "Sundown Studio clone containing elements using vanillajs, swiperJS, gsap and tailwindcss",
         image: project3,
-        tags: ["Reactjs", "Tailwindcss", "PostgreSQL"],
-        link: "#",
-        github: "#",
-    },
-    {
-        title: "AI Writing Assiatant",
-        description: "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-        image: project4,
-        tags: ["Reactjs", "OpenAI", "FastAPI"],
-        link: "#",
-        github: "#",
+        tags: ["Swiperjs", "TailwindCSS", "GSAP"],
+        link: "https://sundown-two-tau.vercel.app/",
+        github: "https://github.com/nikhilsuresh400/Sundown",
     },
 ]
 
@@ -82,7 +74,7 @@ const Project = () => {
                                     <a href={project.link} target='_blank' noopener noreferrer className='p-3 glass rounded-full hover:bg-accentBlue transition-all'>
                                         <LuArrowUpRight className='w-5 h-5' />
                                     </a>
-                                    <a href={project.link} target='_blank' noopener noreferrer className='p-3 glass rounded-full hover:bg-accentBlue transition-all'>
+                                    <a href={project.github} target='_blank' noopener noreferrer className='p-3 glass rounded-full hover:bg-accentBlue transition-all'>
                                         <LuGithub className='w-5 h-5' />
                                     </a>
                                 </div>
@@ -109,7 +101,7 @@ const Project = () => {
                 </div>
 
                 {/* VIEW ALL PROJECTS BUTTON */}
-                <div className='place-items-center mt-12 animate-fade-in animate-delay-500'>
+                {/* <div className='place-items-center mt-12 animate-fade-in animate-delay-500'>
                     
 
                     <button className='relative bg-transparent border border-divider text-whitePrimary-light dark:text-whitePrimary hover:border-whitePrimary-light/16 dark:hover:border-whitePrimary/25
@@ -119,7 +111,7 @@ const Project = () => {
                                                     animated-border'>
                         All Projects <LuMoveRight />
                     </button>
-                </div>
+                </div> */}
             </div>
         </section>
     )
