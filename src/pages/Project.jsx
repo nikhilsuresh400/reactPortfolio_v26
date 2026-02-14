@@ -3,12 +3,20 @@ import { LuArrowUpRight, LuDownload, LuGithub, LuMoveRight } from 'react-icons/l
 import project1 from '../assets/resumeanalyser-project.png'
 import project2 from '../assets/portfolio2024-project.png'
 import project3 from '../assets/sundown-project.png'
-import project4 from '../assets/writingassistant-project.webp'
+import project4 from '../assets/watchnest-project.png'
 
 const projects = [
     {
+        title: "WatchNest",
+        description: "WatchNest is a modern movie exploration web app built with React, featuring trending movies, genre filters, search, and dynamic UI transitions powered by TMDB API.",
+        image: project4,
+        tags: ["Reactjs", "TailwindCSS", "TMDB.API"],
+        link: "https://watchnest-movie-tracker.vercel.app/",
+        github: "https://github.com/nikhilsuresh400/movies-website",
+    },
+    {
         title: "AI Resume Analyser",
-        description: "An intelligent resume analyser powered by gpt-4, helping users improve create better resumes.",
+        description: "An AI-powered resume analyzer web app powered by GPT-4 that evaluates resumes, providing instant feedback and improvement suggestions using natural language processing.",
         image: project1,
         tags: ["Reactjs", "Tailwindcss", "Puter.ai"],
         link: "https://resume-analyser-aipowered.vercel.app/",
